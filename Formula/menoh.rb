@@ -8,6 +8,12 @@ class Menoh < Formula
   revision 1
   head "https://github.com/pfnet-research/menoh.git"
 
+  bottle do
+    root_url "https://github.com/msakai/homebrew-menoh/releases/download/menoh-1.1.1_1"
+    sha256 cellar: :any,                 catalina:     "bb1bd38662a761eb802958ebdc653ac4cba5f56e39c5818917c1a972c3127d2d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4ca6ee7b799454179340481d8b14aee22463e87a73f7550294c1a02806c7d4c2"
+  end
+
   keg_only "it conflicts with the onednn formula"
 
   depends_on "cmake" => :build
